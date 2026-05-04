@@ -35,7 +35,7 @@
 //       {/* Header */}
 //       <div className="p-4 border-b border-base-300">
 //         <h1 className="text-2xl font-bold text-primary tracking-wider text-center md:text-left">
-//           BAKCHODS
+//           
 //         </h1>
 //       </div>
 
@@ -137,7 +137,7 @@ const UserSidebar = () => {
       
       <div className="p-4 border-b border-base-300">
         <h1 className="text-2xl font-bold text-primary tracking-wider text-center md:text-left">
-          BAKCHODS
+          ChatVerse
         </h1>
       </div>
 
