@@ -10,9 +10,10 @@ import {app,server} from './socket/socket.js'
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors({
-    origin:['http://localhost:5173'],
-    credentials:true
-}))
+    // Yahan hum Vercel ka link aur localhost dono daal rahe hain
+    origin: ["http://localhost:3000", "http://localhost:5173", "https://mern-chat-app-97kc.vercel.app"], 
+    credentials: true
+}));
 connectDb()
 import userRoute from './routes/userRoutes.js'
 import messageRoute from './routes/messageRoute.js'
