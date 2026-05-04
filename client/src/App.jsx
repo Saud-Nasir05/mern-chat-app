@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/home/Home';
-import Login from './pages/authentication/login';
+import Login from './pages/authentication/Login';
 import Signup from './pages/authentication/Signup';
 import {  getUserProfileThunk } from './slice/user/userThunk';
 import { useDispatch } from 'react-redux';
