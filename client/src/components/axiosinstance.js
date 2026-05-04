@@ -1,7 +1,7 @@
 import axios from 'axios'
 
-// 🟢 FIX: VITE_DB_ORIGIN kardo, aur "/api" zaroor lagana (agar route waise hi set kiye the)
-const DB_URL = import.meta.env.VITE_DB_ORIGIN || "http://localhost:5000/api"; 
+// ✅ FIX: VITE_DB_ORIGIN ki jagah VITE_DB_URL use kar liya!
+const DB_URL = import.meta.env.VITE_DB_URL || "http://localhost:3000/api/v1"; 
 
 export const axiosInstance = axios.create({
     baseURL: DB_URL,
