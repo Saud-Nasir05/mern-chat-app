@@ -134,7 +134,8 @@ const MessageContainer = () => {
 
   if (!selectedUser) {
     return (
-      <div className='hidden md:flex w-full h-screen justify-center items-center bg-base-100'>
+      // 🟢 FIX: h-screen ki jagah h-full lagaya
+      <div className='hidden md:flex w-full h-full justify-center items-center bg-base-100'>
         <div className='text-center space-y-4'>
           <div className='text-5xl'>👋</div>
           <h2 className='text-2xl font-bold text-base-content/70'>Welcome to Chat!</h2>
@@ -145,7 +146,8 @@ const MessageContainer = () => {
   }
 
   return (
-    <div className='w-full h-screen flex flex-col bg-base-100'>
+    // 🟢 FIX: h-screen ki jagah h-full lagaya
+    <div className='w-full h-full flex flex-col bg-base-100'>
       
       <div className='px-4 py-3 bg-base-100 border-b border-base-300 flex items-center gap-2 sticky top-0 z-10'>
         <button 

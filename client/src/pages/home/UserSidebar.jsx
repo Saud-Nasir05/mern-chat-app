@@ -133,7 +133,8 @@ const UserSidebar = () => {
   });
 
   return (
-    <div className={`h-screen flex-col bg-base-200 border-r border-base-300 w-full md:w-80 transition-all duration-300 ${selectedUser ? 'hidden md:flex' : 'flex'}`}>
+    // 🟢 FIX: h-screen ki jagah h-full lagaya
+    <div className={`h-full flex-col bg-base-200 border-r border-base-300 w-full md:w-80 transition-all duration-300 ${selectedUser ? 'hidden md:flex' : 'flex'}`}>
       
       <div className="p-4 border-b border-base-300">
         <h1 className="text-2xl font-bold text-primary tracking-wider text-center md:text-left">

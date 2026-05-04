@@ -102,7 +102,8 @@ const Home = () => {
   }, [socket, dispatch, selectedUser])
 
   return (
-    <div className='flex h-screen overflow-hidden bg-base-100'>
+    // 🟢 FIX: h-screen ki jagah h-[100dvh] lagaya
+    <div className='flex h-[100dvh] overflow-hidden bg-base-100'>
       <UserSidebar/>
       <MessageContainer/>
     </div>
