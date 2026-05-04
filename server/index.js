@@ -12,7 +12,7 @@ app.use(cookieParser())
 app.use(cors({
     origin: [
         'http://localhost:5173', 
-        'https://mern-chat-app-three-mu.vercel.apps' // 🟢 Screenshot wala actual naya link!
+        'https://mern-chat-app-three-mu.vercel.app' // 🟢 Screenshot wala actual naya link!
     ],
     credentials: true
 }))
