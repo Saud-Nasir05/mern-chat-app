@@ -9,7 +9,10 @@ export const socketSlice = createSlice({
     },
     reducers: {
         initializeSocket: (state, action) => { 
-            const socket = io(import.meta.env.VITE_DB_ORIGIN, {
+            // 🟢 FIX: Yahan fallback URL daala hai taake localhost pe bhi chale
+            const backendURL = import.meta.env.VITE_DB_ORIGIN || "http://localhost:5000";
+            
+            const socket = io(backendURL, {
                 query: {
                     userId: action.payload 
                 }
@@ -21,7 +24,6 @@ export const socketSlice = createSlice({
             state.onlineUsers = action.payload;
         },
 
-        // 🟢 NAYA JADOO: Logout hone par pipe yahan se tootega
         closeSocket: (state) => {
             if (state.socket) {
                 state.socket.close();
@@ -32,6 +34,5 @@ export const socketSlice = createSlice({
     },
 });
 
-// Yahan neeche closeSocket ko export karna mat bhoolna
 export const { initializeSocket, setOnlineUsers, closeSocket } = socketSlice.actions;
 export default socketSlice.reducer;
