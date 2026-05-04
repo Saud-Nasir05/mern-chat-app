@@ -133,7 +133,6 @@ const UserSidebar = () => {
   });
 
   return (
-    // 🟢 FIX: h-screen ki jagah h-full lagaya
     <div className={`h-full flex-col bg-base-200 border-r border-base-300 w-full md:w-80 transition-all duration-300 ${selectedUser ? 'hidden md:flex' : 'flex'}`}>
       
       <div className="p-4 border-b border-base-300">
@@ -178,6 +177,7 @@ const UserSidebar = () => {
         )}
       </div>
 
+      {/* Footer / Current User Profile */}
       <div className="p-4 bg-base-300 border-t border-base-100 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div className="avatar">
@@ -185,8 +185,11 @@ const UserSidebar = () => {
               <img src={myProfilePic} alt="my-avatar" />
             </div>
           </div>
-          <div className="hidden md:block">
-             <p className="text-sm font-bold uppercase">{userProfile?.username || "USER"}</p>
+          {/* 🟢 FIX: 'hidden md:block' hata diya, aur 'truncate' lagaya taake design na toote */}
+          <div>
+             <p className="text-sm font-bold uppercase truncate max-w-[100px] sm:max-w-[150px]">
+               {userProfile?.username || "USER"}
+             </p>
           </div>
         </div>
 
